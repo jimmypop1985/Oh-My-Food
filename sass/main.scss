@@ -1,4 +1,10 @@
-html{
-    background-color: red;
+@import 'config';
 
+html {
+    width: 375px;
+
+}
+
+body {
+    max-width:375px;
 }

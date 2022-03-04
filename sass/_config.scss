@@ -1,14 +1,55 @@
+//Imports the required fonts
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap');
 
+@function set-text-colour($color){
+    @if (lightness($color) > 40%){
+        @return #000000;
+    }
+    @else {
+        @return #ffffff;
+    }
+}
+
+//Declares variables
 $text_font:  'Roboto';
 $logo_text_font: 'Shrikhand';
 $primary_color:#9356DC;
 $secondary_color: #FF79DA;
 $tertiary_color: #99E2D0;
+$bold: 700;
+$normal: 400;
 
-*{
+@mixin centered{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+//Resets
+* {
     box-sizing: border-box;
     margin:0;
     padding:0;
+}
+
+
+//Settings for responsive layout
+@mixin media-md {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin media-lg {
+    @media screen and (min-width: 1024px)
+        {
+            @content;
+        }
+    }
+@mixin media-xl {
+    @media screen and (min-width: 1600px) {
+        @content;
+    }
 }

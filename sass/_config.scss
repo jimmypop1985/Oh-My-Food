@@ -2,7 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap');
 
-@function set-text-colour($color){
+
+@function set-text-color($color){
     @if (lightness($color) > 40%){
         @return #000000;
     }
@@ -20,11 +21,15 @@ $tertiary_color: #99E2D0;
 $bold: 700;
 $normal: 400;
 
-@mixin centered{
+@mixin centered ($direction){
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: $direction;
+    flex-wrap: wrap;
 }
+
+
 
 
 //Resets

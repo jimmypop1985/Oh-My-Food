@@ -1,0 +1,22 @@
+header{
+    width: 100%;
+    height: 65px;
+    padding: 1rem;
+    @include centered(row, center, center);
+    margin-top: 0.4rem;
+
+    .arrow{
+        position: absolute;
+        left:5%;
+
+        &__icon {
+            color: black;
+        }
+    }
+
+    img {
+        height:30px;
+        width: auto;
+    }
+
+}

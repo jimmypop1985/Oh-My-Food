@@ -1,0 +1,31 @@
+.footer{
+    padding:20px;
+    bottom:0px;
+    height:200px;
+    background: #353535;
+
+    &__text {
+        color: set-text-color(#353535);
+        padding:5px;
+        gap:2px;
+
+        &--title {
+            font-family: $logo_text_font, cursive;
+        }
+
+        &--text{
+            font-family: $text_font, sans-serif;
+
+        }
+
+        &--icon {
+            width:25px;
+        }
+
+        &--row{
+            display: flex;
+        }
+
+
+    }
+}

@@ -12,6 +12,10 @@
     }
 }
 
+.checkbox {
+    display: none;
+}
+
 //Declares variables
 $text_font:  'Roboto';
 $logo_text_font: 'Shrikhand';
@@ -20,8 +24,16 @@ $secondary_color: #FF79DA;
 $tertiary_color: #99E2D0;
 $bold: 700;
 $normal: 400;
+$init-box-shadow: 0px 2px 2px -2px;
+$hover-box-shadow: 0px 5px 5px -5px;
 
-@mixin centered ($direction){
+html{
+    overflow-x: hidden;
+}
+
+
+
+@mixin centered ($direction, $justify, $align){
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,6 +49,10 @@ $normal: 400;
     box-sizing: border-box;
     margin:0;
     padding:0;
+
+    a {
+        text-decoration: none;
+    }
 }
 
 

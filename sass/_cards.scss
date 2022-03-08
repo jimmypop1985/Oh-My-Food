@@ -5,9 +5,12 @@
         background-color: #eaeaea;
     }
 
-    .card{
+    .cards {
+        @include centered (column, center, center);
+        justify-content: space-evenly;
+    }
 
-        height: 250px;
+    .card{
         width:90%;
         background-color: white;
         border-radius: 20px;
@@ -42,24 +45,21 @@
 
         &__items{
             padding:10px 20px 10px 20px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
+            @include centered (row, center, center);
+            justify-content: space-between;
             color: black;
 
             &--text{
                 display: flex;
                 flex-direction: column;
-                width: 50%;
                 height:100%;
             }
 
             &--heart{
-
+                
                 font-size: 28px;
-                height:100%;
-                position: relative;
-                left: 45%;
+                height: fit-content;
+
 
                 .full-heart{
                     display: none;
@@ -69,14 +69,19 @@
                     background-clip: content;
                 }
 
-                .checkbox:checked +.label {
+                .line-heart{
+                    background-clip: content;
+                }
 
+                .checkbox:checked +.label {
+            
                     .line-heart{
                         display: none;
                     }
+
                     .full-heart {   
-                     display: block;
-                    }        
+                     display: flex;
+                    } 
                 }
             }
         }

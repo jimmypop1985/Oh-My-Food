@@ -1,0 +1,75 @@
+.menu {
+    &__img {
+        height:250px;
+        width:100%;
+        object-fit: cover;
+    }
+
+    .container__text--link {
+        font-family: $text_font, sans-serif;
+        width: 185px;
+    }
+
+
+    &__container {
+        position:absolute;
+        top:280px;
+        background: #eaeaea;
+        height:1200px;
+        width:100%;
+        border-radius: 50px 50px 0px 0px;
+    }
+
+    &__menu {
+        height: 1400px;
+
+    }
+
+    &__title {
+      @include centered (row, center, center);
+      justify-content: space-between;
+      margin: 30px 0px 10px 0px;
+      padding:0 3% 0 3%;
+      height:50px;
+      width:90%;
+
+        &--text{
+            font-family: $logo_text_font, cursive;
+        }
+
+    }
+
+    .subtitle {
+        position: relative;
+        width:90%;
+        left:0;
+        font-family: $text_font, sans-serif;
+        margin-bottom: 20px;
+
+        h3{
+            padding-bottom: 3px;
+            margin-bottom: 3px;
+        }
+    }
+
+    .underline{
+        width: 40px;
+        border-bottom: 3px solid $tertiary_color;
+    }
+
+    .cards__section {
+            width:90%;
+            margin: 20px 0px 20px 0px;
+            
+    }
+    .card {
+
+        margin-bottom: 20px;
+
+        &__items{
+        @include centered (row, center, center);
+        justify-content: space-between;
+        font-family: $text_font, sans-serif;
+        }
+    }
+    }

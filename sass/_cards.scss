@@ -1,89 +1,67 @@
-.cards{
+.cards{ 
+
+    justify-content: space-evenly;
+
     &__container{
-        height: 1250px;
-        width:100%;
-        background-color: #eaeaea;
-    }
 
-    .cards {
-        @include centered (column, center, center);
+        padding: 5% 0 5% 0;
+        @include centered(column, center, center);
         justify-content: space-evenly;
-    }
+        width:100%;
+        height:1250px;
 
-    .card{
-        width:90%;
+  
+        &--header{
+            text-align: left;
+        }     
+     }
+     .card{
+
+        width: 90%;
         background-color: white;
         border-radius: 20px;
         box-shadow: $init-box-shadow;
-
-        &:hover{
-            box-shadow: $hover-box-shadow;
-        }
-
-        &__new{
-            position: relative;
-            top:10%;
-            left:80%;
-            height: 0px;
-
-            &--text{
-                @include centered(row, center, center);
-                width:80px;
-                height:30px;
-                background-color: $tertiary_color;
-                color: darken($tertiary-color, 40%);
+    
+            &:hover{
+                box-shadow: $hover-box-shadow;
             }
-        }
-
-
-        &__img {
-            object-fit: cover;
-            height:175px;
-            width: 100%;
-            border-radius: 20px 20px 0px 0px;
-        }
-
-        &__items{
-            padding:10px 20px 10px 20px;
-            @include centered (row, center, center);
-            justify-content: space-between;
-            color: black;
-
-            &--text{
-                display: flex;
-                flex-direction: column;
-                height:100%;
-            }
-
-            &--heart{
-                
-                font-size: 28px;
-                height: fit-content;
-
-
-                .full-heart{
-                    display: none;
-                    background: -webkit-gradient(linear, right top, left bottom, from($primary-color), to($secondary-color));
-	                -webkit-background-clip: text;
-	                -webkit-text-fill-color: transparent;
-                    background-clip: content;
-                }
-
-                .line-heart{
-                    background-clip: content;
-                }
-
-                .checkbox:checked +.label {
-            
-                    .line-heart{
-                        display: none;
-                    }
-
-                    .full-heart {   
-                     display: flex;
-                    } 
+    
+            &__new{
+                position: relative;
+                top:10%;
+                left:80%;
+                height: 0px;
+    
+                &--text{
+                    @include centered(row, center, center);
+                    width:80px;
+                    height:30px;
+                    background-color: $tertiary_color;
+                    color: darken($tertiary-color, 40%);
                 }
             }
-        }
+    
+    
+            &__img {
+                object-fit: cover;
+                height:175px;
+                width: 100%;
+                border-radius: 20px 20px 0px 0px;
+            }
+    
+            &__items{
+                padding:10px 20px 10px 20px;
+                @include centered (row, center, center);
+                justify-content: space-between;
+                color: black;
+    
+                &--text{
+                    display: flex;
+                    flex-direction: column;
+                    height:100%;
+                }
+    
+            }
     }
 }
+

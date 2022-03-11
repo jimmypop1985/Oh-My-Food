@@ -32,19 +32,34 @@ $secondary_color: #FF79DA;
 $tertiary_color: #99E2D0;
 $bold: 700;
 $normal: 400;
+$medium: 14pt;
+$largest: 22pt;
+$large: 18pt;
+$small: 12pt;
 $init-box-shadow: 0px 2px 2px -2px;
 $hover-box-shadow: 0px 5px 5px -5px;
 
-.large{
-    font-size: 24pt;
+.grey{
+    background: #f2f2f2
+}
+.row{
+    @include centered (row, center, center);
+}
+
+.largest{
+    font-size: $largest;
 }
 
 .large{
-    font-size: 14pt;
+    font-size: $large;
 }
 
 .medium{
-    font-size: 12pt;
+    font-size: $medium;
+}
+
+.small {
+    font-size: $small;
 }
 
 .bold{

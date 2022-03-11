@@ -1,0 +1,43 @@
+.heart{
+            
+    font-size: 28px;
+    height: fit-content;
+
+
+    &--full{
+        background: -webkit-gradient(linear, right top, left bottom, from($primary-color), to($secondary-color));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: content;
+    }
+
+    &--checkbox {
+        display: none;
+    }
+
+    &--checkbox:not(:checked) +.label {
+    
+        .heart--line{
+            display: block;
+        }
+
+        .heart--full {   
+            display: none;
+        } 
+    }
+
+    &--checkbox:checked +.label {
+    
+        .heart--line{
+            display: none;
+        }
+
+        .heart--full {   
+            display: block;
+        } 
+    }
+
+    &--line{
+        background-clip: content;
+    }
+}

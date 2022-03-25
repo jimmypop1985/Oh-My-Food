@@ -6,6 +6,7 @@
 @import'cards';
 @import 'menu';
 @import 'heart';
+@import 'responsive';
 
 main {
     margin: 0 auto;
@@ -45,7 +46,7 @@ main {
 
         .list{
             position: relative;
-            justify-content: flex-start;
+            @include centered(row, flex-start, center);
             gap: 20px;
             height:80px;
             padding:20px;

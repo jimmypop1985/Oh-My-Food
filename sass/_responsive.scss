@@ -1,0 +1,22 @@
+@include media-lg{
+
+    main{
+        
+        .left-title{
+            text-align: center;
+            background-color: red;
+        }
+    
+    .cards{
+        @include centered(row, center, center);
+        .card{
+            width:30%;
+            }
+        }
+    }
+}
+
+    .footer{
+        @include centered(column ,center ,center);
+        flex-wrap: nowrap;
+    }

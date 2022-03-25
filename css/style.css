@@ -280,6 +280,31 @@ header img {
   background-clip: content;
 }
 
+@media screen and (min-width: 1024px) {
+  main .left-title {
+    text-align: center;
+    background-color: red;
+  }
+  main .cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  main .cards .card {
+    width: 30%;
+  }
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-wrap: nowrap;
+}
+
 main {
   margin: 0 auto;
   font-family: "Roboto";
@@ -316,7 +341,11 @@ main ul {
 }
 main ul .list {
   position: relative;
-  justify-content: flex-start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 20px;
   height: 80px;
   padding: 20px;

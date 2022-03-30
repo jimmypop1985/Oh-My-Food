@@ -6,10 +6,8 @@
         border-radius: 100px;
         color: white;
         box-shadow: $init-box-shadow;
-        transition: transform 0.4s;
 
         &:hover{
-            transform: scale(1.1);
             background: linear-gradient(to bottom right, lighten($secondary-color, 5%), lighten($primary-color, 5%));
             box-shadow: $hover-box-shadow;
         }

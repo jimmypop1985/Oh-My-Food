@@ -1,8 +1,13 @@
 .footer{
-    bottom: 0px;
     padding:20px;
     height:200px;
     background: #353535;
+    margin-top: -50px;;
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
 
     &__text {
         color: set-text-color(#353535);

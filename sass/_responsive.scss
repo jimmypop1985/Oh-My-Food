@@ -4,19 +4,90 @@
         
         .left-title{
             text-align: center;
-            background-color: red;
         }
+
+        ul {
+            list-style-type: none;
+            width:100%;
+            @include centered (row, center, center);
+            gap:30px;
     
-    .cards{
-        @include centered(row, center, center);
-        .card{
-            width:30%;
+            .list{
+                width: 30%;
+                flex-direction: column;
+                justify-content: center;
+                height: auto;
+    
+                &__number{
+                    width:100%;
+                    position: absolute;
+                    top:0px;
+                    border-radius: 20px 20px 0px 0px;
+                    left: unset;
+                }
+    
+                &__icon {
+                    position: unset;
+                    margin-top: 20px;
+                }
+    
+                &__text {
+                    position: unset;
+                }
             }
         }
     }
-}
+
+
+    .cards{
+        @include centered(row, center, center);
+        .card{
+
+            &:hover{
+                box-shadow: $hover-box-shadow;
+
+            }
+        }
+    }
+
+
+    .menu {
+
+        .cards {
+            @include centered(row, center, center);
+            .course{
+               width:30%;
+
+                &__subtitle {
+                    text-align: center;
+
+                    &--underline{
+                        width: 100%;
+                    }
+                }
+                .card{
+                    height:120px;
+                    &__items{
+                        @include centered (column, center, center);
+                        height:100%;
+                        flex-wrap: nowrap;
+            
+                        &--text{
+                            width: 100%;
+                            text-align: center;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-around;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
 
     .footer{
         @include centered(column ,center ,center);
         flex-wrap: nowrap;
     }
+}

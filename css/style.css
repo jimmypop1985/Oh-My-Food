@@ -38,6 +38,12 @@
 
 html {
   overflow-x: hidden;
+  animation: viewport 3s;
+}
+@keyframes viewport {
+  from, to {
+    overflow-y: hidden;
+  }
 }
 
 * {
@@ -147,8 +153,8 @@ main ul .list__text {
   border: 16px solid #9356DC;
   border-top: 16px solid #FF79DA;
   border-radius: 50%;
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
   animation: spin 1.5s linear infinite;
 }
 
@@ -203,7 +209,7 @@ header img {
 }
 .button:hover {
   background: linear-gradient(to bottom right, #ff93e1, #a16be0);
-  box-shadow: 0px 5px 5px -5px;
+  box-shadow: 0px 1px 0px 1px darkgray;
 }
 
 .container {
@@ -261,8 +267,8 @@ header img {
   background-color: white;
   border-radius: 20px;
   box-shadow: 0px 2px 2px -2px;
-  overflow: hidden;
   transition: transform 1s ease-in-out;
+  overflow: hidden;
 }
 .cards .card__1 {
   animation-delay: 0.8s;
@@ -286,9 +292,12 @@ header img {
     transform: translateY(0px);
   }
 }
+.cards .card:hover__items {
+  max-width: calc(100% - 160px);
+}
 .cards .card:hover .box {
-  transform: translateX(0%);
-  transition: transform 0.8s ease-in-out;
+  margin-right: 0px;
+  transition: margin-right 0.8s ease-in-out;
 }
 .cards .card:hover .box .check-icon {
   transform: rotate(-360deg);
@@ -318,7 +327,6 @@ header img {
   border-radius: 20px 20px 0px 0px;
 }
 .cards .card__items {
-  width: 100%;
   padding: 10px 20px 10px 20px;
   display: flex;
   justify-content: center;
@@ -328,16 +336,19 @@ header img {
   flex-wrap: nowrap;
   justify-content: space-between;
   color: black;
+  max-width: calc(100% - 80px);
 }
 .cards .card__items--text {
-  display: flex;
-  flex-direction: column;
   height: 100%;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  width: 100%;
 }
 .cards .card__items--price {
   justify-self: flex-end;
+}
+.cards .card__items--item {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .menu {
@@ -394,13 +405,10 @@ header img {
   display: flex;
 }
 .menu .box {
-  transform: translateX(100%);
-  transition: transform 0.4s ease-in-out;
+  margin-right: 0px;
+  transition: margin-right 0.4s ease-in-out;
   background: #99E2D0;
-  height: 100%;
   width: 80px;
-  position: absolute;
-  right: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -503,6 +511,9 @@ header img {
     flex-direction: row;
     flex-wrap: wrap;
   }
+  .cards .card {
+    width: 30%;
+  }
   .cards .card:hover {
     box-shadow: 0px 5px 5px -5px;
   }
@@ -525,6 +536,7 @@ header img {
   }
   .menu .cards .course .card {
     height: 120px;
+    width: 100%;
   }
   .menu .cards .course .card__items {
     display: flex;

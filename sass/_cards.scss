@@ -13,8 +13,8 @@
         background-color: white;
         border-radius: 20px;
         box-shadow: $init-box-shadow;
-        overflow: hidden;
         transition: transform 1s ease-in-out;
+        overflow: hidden;
 
         &__1{
             animation-delay: 0.8s;
@@ -47,10 +47,14 @@
 
             &:hover {
 
+                &__items{
+                     max-width: calc(100% - 160px);
+                    }
+
                 .box{
 
-                    transform: translateX(0%);
-                    transition: transform 0.8s ease-in-out;
+                    margin-right: 0px;
+                    transition: margin-right 0.8s ease-in-out;
 
                     .check-icon{
                         transform: rotate(-360deg);
@@ -88,27 +92,33 @@
         }
 
         &__items{
-            width: 100%;
             padding:10px 20px 10px 20px;
-            @include centered (row, center, center);
+           @include centered (row, center, center);
             flex-wrap: nowrap;
             justify-content: space-between;
             color: black;
+            max-width: calc(100% - 80px);
+
+            
           
 
             &--text{
-                display: flex;
-                flex-direction: column;
+            //   @include centered (column, center, center);
                 height:100%;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-               // overflow: hidden;
- 
+                width: 100%;
             }   
 
             &--price {
                 justify-self: flex-end;
+
+                
             }
-        }
+
+            &--item{
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }     
+          }
     }
 }

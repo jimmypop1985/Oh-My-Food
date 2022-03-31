@@ -72,6 +72,14 @@ $hover-box-shadow: 0px 5px 5px -5px;
 
 html{
     overflow-x: hidden;
+    animation: viewport 3s;   
+
+    @keyframes viewport{
+        from, to{
+            overflow-y: hidden;
+        }
+    }
+    
 }
 
 //Resets

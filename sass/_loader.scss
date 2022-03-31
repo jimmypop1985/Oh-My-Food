@@ -12,14 +12,15 @@
     align-items: center;
     animation: disappear 0s ease-in 3s;
     animation-fill-mode: forwards;
+   
 }
 
 .loader {
     border: 16px solid $primary_color;
     border-top: 16px solid $secondary_color;
     border-radius: 50%;
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     animation: spin 1.5s linear infinite;
 
   }

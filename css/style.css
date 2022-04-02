@@ -540,7 +540,7 @@ header img {
   .menu .cards .course .card {
     width: 100%;
   }
-  .menu .cards .course .card:hover .card__items {
+  .menu .cards .course .card__items {
     min-height: 120px;
   }
   .menu .cards .course .card:hover .card__items--item {
@@ -554,7 +554,6 @@ header img {
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 100%;
     flex-wrap: nowrap;
   }
   .menu .cards .course .card__items--item {

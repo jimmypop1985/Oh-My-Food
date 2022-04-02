@@ -57,19 +57,54 @@
         display: flex;
     }
 
+    .box-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: -80px;
+        transition: margin-right 1s ease-in-out;
+    }
+
     .box {
-        margin-right: 0px;
-        transition: margin-right 0.4s ease-in-out;
+        height: 100%;
         background: $tertiary_color;
-        width:80px;
+        min-width:80px;
         @include centered(column, center, center);
         border-radius: 0px 20px 20px 0px;
+        
     }
     
     .check-icon{
         transform: rotate(360deg);
-        transition: transform 0.5s ease-in-out;
+        transition: rotate 0.5s ease-in-out;
         background: $tertiary_color;
         color: white;
+    }
+
+    .card{
+        &:hover {
+
+            .card__items{
+                 width: calc(100% - 160px);
+                 transition: width 1s ease-in-out;
+            }
+
+                .check-icon{
+                    transform: rotate(-360deg);
+                    transition: transform 1s ease-in-out;
+                
+                }
+            .box-container{
+                margin-right: 0px;
+                transition: margin-right 1s ease-in-out
+            }
+        }
+
+        &__items{
+            width: calc(100% - 80px);
+            transition: width 1s ease-in-out;
+        }
+
+  
     }
 }

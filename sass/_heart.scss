@@ -1,3 +1,8 @@
+.heart__container{
+    @include centered(column, center, center);
+    padding:5px;
+}
+
 .heart{
     transition: background 2s ease-in-out;
     font-size: 28px;

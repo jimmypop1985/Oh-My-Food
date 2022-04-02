@@ -9,7 +9,7 @@
 
         &:hover{
             background: linear-gradient(to bottom right, lighten($secondary-color, 5%), lighten($primary-color, 5%));
-            box-shadow: 0px 1px 0px 1px darkgray;
+            box-shadow: $hover-box-shadow darkgrey;
         }
     }
 

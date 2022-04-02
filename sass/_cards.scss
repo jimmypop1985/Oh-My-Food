@@ -45,27 +45,7 @@
             
         }
 
-            &:hover {
-
-                &__items{
-                     max-width: calc(100% - 160px);
-                    }
-
-                .box{
-
-                    margin-right: 0px;
-                    transition: margin-right 0.8s ease-in-out;
-
-                    .check-icon{
-                        transform: rotate(-360deg);
-                        transition: transform 1s ease-in-out;
-                    
-                    }
-                   
-                }
-            }
-
-      
+          
     
             &__new{
                 position: absolute;
@@ -92,33 +72,31 @@
         }
 
         &__items{
-            padding:10px 20px 10px 20px;
-           @include centered (row, center, center);
+            height:100%;
+            padding: 10px 0px 10px 20px;
+            @include centered (row, center, center);
             flex-wrap: nowrap;
             justify-content: space-between;
             color: black;
-            max-width: calc(100% - 80px);
-
-            
-          
-
+           
             &--text{
-            //   @include centered (column, center, center);
                 height:100%;
                 width: 100%;
             }   
 
-            &--price {
-                justify-self: flex-end;
-
-                
-            }
 
             &--item{
+                align-self: center;
+                width:100%;
                 text-overflow: ellipsis;
                 white-space: nowrap;
                 overflow: hidden;
-            }     
+            }  
+            
+            &--price{
+                text-align: center;
+                min-width: 80px;
+            }
           }
     }
 }

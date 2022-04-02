@@ -209,7 +209,7 @@ header img {
 }
 .button:hover {
   background: linear-gradient(to bottom right, #ff93e1, #a16be0);
-  box-shadow: 0px 1px 0px 1px darkgray;
+  box-shadow: 0px 5px 5px -5px darkgrey;
 }
 
 .container {
@@ -292,17 +292,6 @@ header img {
     transform: translateY(0px);
   }
 }
-.cards .card:hover__items {
-  max-width: calc(100% - 160px);
-}
-.cards .card:hover .box {
-  margin-right: 0px;
-  transition: margin-right 0.8s ease-in-out;
-}
-.cards .card:hover .box .check-icon {
-  transform: rotate(-360deg);
-  transition: transform 1s ease-in-out;
-}
 .cards .card__new {
   position: absolute;
   top: 20px;
@@ -327,7 +316,8 @@ header img {
   border-radius: 20px 20px 0px 0px;
 }
 .cards .card__items {
-  padding: 10px 20px 10px 20px;
+  height: 100%;
+  padding: 10px 0px 10px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -336,19 +326,21 @@ header img {
   flex-wrap: nowrap;
   justify-content: space-between;
   color: black;
-  max-width: calc(100% - 80px);
 }
 .cards .card__items--text {
   height: 100%;
   width: 100%;
 }
-.cards .card__items--price {
-  justify-self: flex-end;
-}
 .cards .card__items--item {
+  align-self: center;
+  width: 100%;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+}
+.cards .card__items--price {
+  text-align: center;
+  min-width: 80px;
 }
 
 .menu {
@@ -404,11 +396,17 @@ header img {
 .menu a {
   display: flex;
 }
+.menu .box-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: -80px;
+  transition: margin-right 1s ease-in-out;
+}
 .menu .box {
-  margin-right: 0px;
-  transition: margin-right 0.4s ease-in-out;
+  height: 100%;
   background: #99E2D0;
-  width: 80px;
+  min-width: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -418,9 +416,34 @@ header img {
 }
 .menu .check-icon {
   transform: rotate(360deg);
-  transition: transform 0.5s ease-in-out;
+  transition: rotate 0.5s ease-in-out;
   background: #99E2D0;
   color: white;
+}
+.menu .card:hover .card__items {
+  width: calc(100% - 160px);
+  transition: width 1s ease-in-out;
+}
+.menu .card:hover .check-icon {
+  transform: rotate(-360deg);
+  transition: transform 1s ease-in-out;
+}
+.menu .card:hover .box-container {
+  margin-right: 0px;
+  transition: margin-right 1s ease-in-out;
+}
+.menu .card__items {
+  width: calc(100% - 80px);
+  transition: width 1s ease-in-out;
+}
+
+.heart__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 5px;
 }
 
 .heart {
@@ -518,15 +541,9 @@ header img {
     box-shadow: 0px 5px 5px -5px;
   }
 
-  .menu .cards {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
   .menu .cards .course {
     width: 30%;
+    height: 100%;
   }
   .menu .cards .course__subtitle {
     text-align: center;
@@ -535,8 +552,16 @@ header img {
     width: 100%;
   }
   .menu .cards .course .card {
-    height: 120px;
     width: 100%;
+  }
+  .menu .cards .course .card:hover .card__items {
+    height: 120px;
+    transition: all 2s ease-in-out;
+  }
+  .menu .cards .course .card:hover .card__items--item {
+    text-overflow: unset;
+    white-space: unset;
+    overflow: unset;
   }
   .menu .cards .course .card__items {
     display: flex;
@@ -546,6 +571,9 @@ header img {
     flex-wrap: wrap;
     height: 100%;
     flex-wrap: nowrap;
+  }
+  .menu .cards .course .card__items--item {
+    width: 100%;
   }
   .menu .cards .course .card__items--text {
     width: 100%;

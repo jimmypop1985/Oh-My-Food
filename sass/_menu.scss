@@ -8,7 +8,7 @@
         border-radius: 50px 50px 0px 0px;
     }
 
-    .heart{
+    .heart {
         right: 30px;
         font-size: 40px;
     }
@@ -41,7 +41,7 @@
             text-align: left;
             width:100%;
     
-            &--underline{
+            &--underline {
                 width: 40px;
                 border-bottom: 3px solid $tertiary_color;
             }
@@ -50,23 +50,22 @@
                 padding: 3px;
 
             }
-            &--price{
+            &--price {
                 text-decoration: none;
             }
         }
     }
-    .button{
+    .button {
         width: 180px;
         font-family: $text_font, sans-serif;
     } 
-
 
     a {
         display: flex;
         text-decoration: none;
     }
 
-    .box-container{
+    .box-container {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -83,37 +82,34 @@
         
     }
     
-    .check-icon{
+    .check-icon {
         transform: rotate(360deg);
         transition: rotate 0.5s ease-in-out;
         background: $tertiary_color;
         color: white;
     }
 
-    .card{
+    .card {
         &:hover {
-
-            .card__items{
+            .card__items {
                  width: calc(100% - 160px);
                  transition: width 1s ease-in-out;
             }
 
-                .check-icon{
-                    transform: rotate(-360deg);
-                    transition: transform 1s ease-in-out;
-                
-                }
-            .box-container{
+            .check-icon {
+                transform: rotate(-360deg);
+                transition: transform 1s ease-in-out;
+            
+            }
+            .box-container {
                 margin-right: 0px;
                 transition: margin-right 1s ease-in-out
             }
         }
 
-        &__items{
+        &__items {
             width: calc(100% - 80px);
             transition: width 1s ease-in-out;
-        }
-
-  
+        }  
     }
 }

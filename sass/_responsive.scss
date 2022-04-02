@@ -1,25 +1,24 @@
-@include media-lg{
+@include media-lg {
 
-    main{
+    main {
         
-        .left-title{
+        .left-title {
             text-align: center;
-
         }
 
-        ul {
+        .how {
             list-style-type: none;
             width:100%;
             @include centered (row, center, center);
             gap:30px;
     
-            .list{
+            .list {
                 width: 30%;
                 flex-direction: column;
                 justify-content: center;
                 height: auto;
     
-                &__number{
+                &__number {
                     width:100%;
                     position: absolute;
                     top:0px;
@@ -40,24 +39,23 @@
     }
 
 
-    .cards{
+    .cards {
        @include centered(row, center, center);
-        .card{
-
+       
+       .card {
             width:30%;
 
-            &:hover{
+            &:hover {
                 box-shadow: $hover-box-shadow;
             }
         }
     }
 
-
     .menu {
 
         .cards {
             align-items: unset;
-            .course{
+            .course {
                 width:30%;
                 height:100%;
             
@@ -65,36 +63,36 @@
 
                     text-align: center;
 
-                    &--underline{
+                    &--underline {
                         width: 100%;
                     }
                 }
-                .card{
+                .card {
                     width:100%;
 
-                    &:hover{
+                    &:hover {
                         
-                        .card__items{
+                        .card__items {
                             min-height: 120px;
 
                             &--item{
                             text-overflow: unset;
                             white-space: unset;
                             overflow: unset;
-                        }
+                            }
                         }
                     }
 
-                    &__items{
+                    &__items {
                         @include centered (column, center, center);
                         height:100%;
                         flex-wrap: nowrap;
 
-                        &--item{
+                        &--item {
                             width:100%;
                         }  
             
-                        &--text{
+                        &--text {
                             width: 100%;
                             text-align: center;
                             display: flex;
@@ -102,14 +100,12 @@
                             justify-content: space-around;
                         }
                     }
-        
                 }
             }
         }
     }
-    
 
-    .footer{
+    .footer {
         @include centered(column ,center ,center);
         flex-wrap: nowrap;
     }

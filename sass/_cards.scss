@@ -1,4 +1,6 @@
-.cards{ 
+//Sets styling for cards across the site
+
+.cards { 
 
     @include centered (column, center, center);
     width:100%;
@@ -6,64 +8,61 @@
     padding-bottom: 50px;
    
 
-     .card{
+    .card {
 
-        position: relative;
-        width: 100%;
-        background-color: white;
-        border-radius: 20px;
-        box-shadow: $init-box-shadow;
-        transition: transform 1s ease-in-out;
-        overflow: hidden;
+    position: relative;
+    width: 100%;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: $init-box-shadow;
+    transition: transform 1s ease-in-out;
+    overflow: hidden;
 
-        &__1{
+        &__1 {
             animation-delay: 0.8s;
             animation: slide-up 0.5s ease-in-out;
         }
         
-        &__2{
+        &__2 {
             animation-delay: 1s;
             animation: slide-up 1s ease-in-out;
         }
 
-        &__3{
+        &__3 {
             animation-delay: 1s;
             animation: slide-up 1.5s ease-in-out;
         }
 
         @keyframes slide-up {
 
-            0%{
+            0% {
                 opacity: 0%;
                 transform: translateY(50px);
             }
 
-            100%{
+            100% {
                 opacity: 100%;
                 transform: translateY(0px);
             }
             
         }
 
-          
-    
-            &__new{
-                position: absolute;
-                top: 20px;
-                right:10px;
+        &__new {
+            position: absolute;
+            top: 20px;
+            right:10px;
 
-    
-                &--text{
-                    @include centered(row, center, center);
-                    width:80px;
-                    height:30px;
-                    background-color: $tertiary_color;
-                    color: darken($tertiary-color, 40%);
-                    font-size: $medium;
-                }
+
+            &--text {
+                @include centered(row, center, center);
+                width:80px;
+                height:30px;
+                background-color: $tertiary_color;
+                color: darken($tertiary-color, 40%);
+                font-size: $medium;
             }
-    
-    
+        }
+
         &__img {
             object-fit: cover;
             height:175px;
@@ -71,7 +70,7 @@
             border-radius: 20px 20px 0px 0px;
         }
 
-        &__items{
+        &__items {
             height:100%;
             padding: 10px 0px 10px 20px;
             @include centered (row, center, center);
@@ -79,24 +78,23 @@
             justify-content: space-between;
             color: black;
            
-            &--text{
+            &--text {
                 height:100%;
                 width: 100%;
             }   
 
-
-            &--item{
+            &--item {
                 align-self: center;
                 width:100%;
                 text-overflow: ellipsis;
                 white-space: nowrap;
                 overflow: hidden;
             }  
-            
-            &--price{
+         
+            &--price {
                 text-align: center;
                 min-width: 80px;
             }
-          }
+        }
     }
 }

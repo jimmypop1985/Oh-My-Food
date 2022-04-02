@@ -1,11 +1,10 @@
-header{
-    width: 100%;
+header {
     height: 65px;
     padding: 1rem;
     @include centered(row, center, center);
     margin-top: 0.4rem;
 
-    .arrow{
+    .arrow {
         position: absolute;
         left:30px;
         color: black;
@@ -13,7 +12,6 @@ header{
 
     img {
         height:30px;
-        width: auto;
     }
 
 }

@@ -2,12 +2,11 @@
     @include centered(column, center, center);
 }
 
-.heart{
+.heart {
 
     font-size: 28px;
-  
 
-    &--full{
+    &--full {
         position: absolute;
         right:15px;
         background: -webkit-gradient(linear, right top, left bottom, from(rgba($primary-color,1)), to(rgba($secondary-color,1)));
@@ -15,23 +14,20 @@
         -webkit-text-fill-color: transparent;
         opacity: 0;
 
-        &:hover{
-
+        &:hover {
             transition: opacity 1s ease-in-out, transform 0.4s ease-in-out;
             opacity: 1;
         }
     }
-    &--line{
-            position: absolute;
-            right:15px;
-            transition: opacity 1s ease-in-out, tranform 0.4s ease-in-out;
-            display: block;
-            opacity: 1;
-           
+    &--line {
+        position: absolute;
+        right:15px;
+        transition: opacity 1s ease-in-out, tranform 0.4s ease-in-out;
+        display: block;
+        opacity: 1;
 
         &:hover {
             opacity: 0;
-        }
-        
+        }        
     }
 }

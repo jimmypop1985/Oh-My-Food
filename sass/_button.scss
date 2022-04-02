@@ -1,15 +1,18 @@
-.button{
-        cursor: pointer;
-        background: linear-gradient(to bottom right, $secondary-color, $primary_color);
-        @include centered (row, center, center);
-        padding:20px;
-        border-radius: 100px;
-        color: white;
-        box-shadow: $init-box-shadow;
+// Sets the styling for the order buttons on 
+// normal display and hover
 
-        &:hover{
-            background: linear-gradient(to bottom right, lighten($secondary-color, 5%), lighten($primary-color, 5%));
-            box-shadow: $hover-box-shadow darkgrey;
-        }
+.button {
+    cursor: pointer;
+    background: linear-gradient(to bottom right, $secondary-color, $primary_color);
+    padding:20px;
+    border-radius: 100px;
+    color: white;
+    box-shadow: $init-box-shadow;
+    @include centered(row, center, center);
+
+    &:hover {
+        background: linear-gradient(to bottom right, lighten($secondary-color, 5%), lighten($primary-color, 5%));
+        box-shadow: $hover-box-shadow darkgrey;
     }
+}
 

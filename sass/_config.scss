@@ -39,22 +39,22 @@ $small: 12pt;
 $init-box-shadow: 0px 2px 2px -2px;
 $hover-box-shadow: 0px 5px 5px -5px;
 
-.grey{
+.grey {
     background: #f2f2f2
 }
-.row{
+.row {
     @include centered (row, center, center);
 }
 
-.largest{
+.largest {
     font-size: $largest;
 }
 
-.large{
+.large {
     font-size: $large;
 }
 
-.medium{
+.medium {
     font-size: $medium;
 }
 
@@ -62,15 +62,15 @@ $hover-box-shadow: 0px 5px 5px -5px;
     font-size: $small;
 }
 
-.bold{
+.bold {
     font-weight: $bold;
 }
 
-.normal{
+.normal {
     font-weight: $normal
 }
 
-html{
+html {
     overflow-x: hidden;
     animation: viewport 3s;   
 
@@ -95,20 +95,9 @@ html{
 
 
 //Settings for responsive layout
-@mixin media-md {
-    @media screen and (min-width: 768px) {
-        @content;
-    }
-}
 
 @mixin media-lg {
-    @media screen and (min-width: 1024px)
-        {
-            @content;
-        }
-    }
-@mixin media-xl {
-    @media screen and (min-width: 1600px) {
+    @media screen and (min-width: 1024px){
         @content;
     }
 }

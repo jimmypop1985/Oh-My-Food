@@ -1,8 +1,5 @@
-.container {
-     
-    width: 100%;
+.container {  
     @include centered(column, center, center);
     gap:40px;
-    padding:50px;
-    
+    padding:50px;  
 }

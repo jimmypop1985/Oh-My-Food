@@ -75,7 +75,7 @@
                     &:hover{
                         
                         .card__items{
-                            height: 120px;
+                            min-height: 120px;
 
                             &--item{
                             text-overflow: unset;

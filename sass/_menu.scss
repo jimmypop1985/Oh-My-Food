@@ -8,6 +8,11 @@
         border-radius: 50px 50px 0px 0px;
     }
 
+    .heart{
+        right: 30px;
+        font-size: 40px;
+    }
+
     
     &__img {
         height:250px;
@@ -45,6 +50,9 @@
                 padding: 3px;
 
             }
+            &--price{
+                text-decoration: none;
+            }
         }
     }
     .button{
@@ -55,6 +63,7 @@
 
     a {
         display: flex;
+        text-decoration: none;
     }
 
     .box-container{

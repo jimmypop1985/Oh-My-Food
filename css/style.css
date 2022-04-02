@@ -351,6 +351,10 @@ header img {
   position: relative;
   border-radius: 50px 50px 0px 0px;
 }
+.menu .heart {
+  right: 30px;
+  font-size: 40px;
+}
 .menu__img {
   height: 250px;
   width: 100%;
@@ -389,12 +393,16 @@ header img {
 .menu .course__subtitle--text {
   padding: 3px;
 }
+.menu .course__subtitle--price {
+  text-decoration: none;
+}
 .menu .button {
   width: 180px;
   font-family: "Roboto", sans-serif;
 }
 .menu a {
   display: flex;
+  text-decoration: none;
 }
 .menu .box-container {
   display: flex;
@@ -443,53 +451,32 @@ header img {
   align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
-  padding: 5px;
 }
 
 .heart {
-  transition: background 2s ease-in-out;
   font-size: 28px;
-  height: fit-content;
 }
 .heart--full {
-  position: relative;
-  bottom: 30px;
+  position: absolute;
+  right: 15px;
   background: -webkit-gradient(linear, right top, left bottom, from(#9356dc), to(#ff79da));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: content;
+  opacity: 0;
 }
-.heart--checkbox {
-  display: none;
+.heart--full:hover {
+  transition: opacity 1s ease-in-out, transform 0.4s ease-in-out;
+  opacity: 1;
 }
-.heart--checkbox:not(:checked) + .label .heart--line {
-  position: relative;
+.heart--line {
+  position: absolute;
+  right: 15px;
   transition: opacity 1s ease-in-out, tranform 0.4s ease-in-out;
   display: block;
   opacity: 1;
-  transform: scale(1);
 }
-.heart--checkbox:not(:checked) + .label .heart--full {
+.heart--line:hover {
   opacity: 0;
-  width: 0px;
-  height: 0px;
-}
-.heart--checkbox:checked + .label .heart--line {
-  opacity: 0;
-  width: 0px;
-  height: 0px;
-}
-.heart--checkbox:checked + .label .heart--full {
-  transition: opacity 1s ease-in-out, transform 0.4s ease-in-out;
-  opacity: 1;
-  background: -webkit-gradient(linear, right top, left bottom, from(#9356dc), to(#ff79da));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: content;
-  display: block;
-}
-.heart--line {
-  background-clip: content;
 }
 
 @media screen and (min-width: 1024px) {
@@ -558,7 +545,7 @@ header img {
     width: 100%;
   }
   .menu .cards .course .card:hover .card__items {
-    height: 120px;
+    min-height: 120px;
   }
   .menu .cards .course .card:hover .card__items--item {
     text-overflow: unset;

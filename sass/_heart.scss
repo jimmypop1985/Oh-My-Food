@@ -1,64 +1,37 @@
 .heart__container{
     @include centered(column, center, center);
-    padding:5px;
 }
 
 .heart{
-    transition: background 2s ease-in-out;
+
     font-size: 28px;
-    height: fit-content;
   
 
     &--full{
-        position: relative;
-        bottom:30px;
+        position: absolute;
+        right:15px;
         background: -webkit-gradient(linear, right top, left bottom, from(rgba($primary-color,1)), to(rgba($secondary-color,1)));
-       -webkit-background-clip: text;
+        -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        background-clip: content;
+        opacity: 0;
 
-    }
-
-    &--checkbox {
-       display: none;
-    }
-
-    &--checkbox:not(:checked) +.label {
-        .heart--line{
-            position: relative;
-            transition: opacity 1s ease-in-out, tranform 0.4s ease-in-out;
-            display: block;
-            opacity: 1;
-            transform: scale(1);
-        }
-
-        .heart--full {
-            opacity: 0;
-            width:0px;
-            height:0px;
-        } 
-    }
-
-    &--checkbox:checked +.label {
-        .heart--line{
-            opacity: 0;
-            width:0px;
-            height:0px;
-        }
-
-        .heart--full {  
+        &:hover{
 
             transition: opacity 1s ease-in-out, transform 0.4s ease-in-out;
             opacity: 1;
-            background: -webkit-gradient(linear, right top, left bottom, from(rgba($primary-color,1)), to(rgba($secondary-color,1)));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: content;
-            display: block;
-        } 
+        }
     }
-
     &--line{
-        background-clip: content;
+            position: absolute;
+            right:15px;
+            transition: opacity 1s ease-in-out, tranform 0.4s ease-in-out;
+            display: block;
+            opacity: 1;
+           
+
+        &:hover {
+            opacity: 0;
+        }
+        
     }
 }

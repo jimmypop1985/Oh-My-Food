@@ -17,6 +17,7 @@
     box-shadow: $init-box-shadow;
     transition: transform 1s ease-in-out;
     overflow: hidden;
+    padding:20px
 
         &__1 {
             animation-delay: 0.8s;
@@ -71,7 +72,6 @@
         }
 
         &__items {
-            height:100%;
             padding: 10px 0px 10px 20px;
             @include centered (row, center, center);
             flex-wrap: nowrap;
@@ -89,12 +89,18 @@
                 text-overflow: ellipsis;
                 white-space: nowrap;
                 overflow: hidden;
-                padding:5px;
+                padding:10px;
             }  
          
             &--price {
+                height: 100%;
                 text-align: center;
                 min-width: 80px;
+
+                h3{
+                    position: absolute;
+                    bottom: 20px;
+                }
             }
         }
     }

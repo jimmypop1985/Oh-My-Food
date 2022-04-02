@@ -265,10 +265,9 @@ header img {
   box-shadow: 0px 2px 2px -2px;
   transition: transform 1s ease-in-out;
   overflow: hidden;
-}
-.cards .card__1 {
-  animation-delay: 0.8s;
-  animation: slide-up 0.5s ease-in-out;
+  padding: 20px .cards .card __1;
+  padding-animation-delay: 0.8s;
+  padding-animation: slide-up 0.5s ease-in-out;
 }
 .cards .card__2 {
   animation-delay: 1s;
@@ -312,7 +311,6 @@ header img {
   border-radius: 20px 20px 0px 0px;
 }
 .cards .card__items {
-  height: 100%;
   padding: 10px 0px 10px 20px;
   display: flex;
   justify-content: center;
@@ -333,11 +331,16 @@ header img {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  padding: 5px;
+  padding: 10px;
 }
 .cards .card__items--price {
+  height: 100%;
   text-align: center;
   min-width: 80px;
+}
+.cards .card__items--price h3 {
+  position: absolute;
+  bottom: 20px;
 }
 
 .menu {

@@ -41,7 +41,7 @@
 
 
     .cards{
-        @include centered(row, center, center);
+       @include centered(row, center, center);
         .card{
 
             width:30%;
@@ -56,7 +56,7 @@
     .menu {
 
         .cards {
-
+            align-items: unset;
             .course{
                 width:30%;
                 height:100%;
@@ -76,7 +76,6 @@
                         
                         .card__items{
                             height: 120px;
-                            transition: all 2s ease-in-out;
 
                             &--item{
                             text-overflow: unset;

@@ -217,7 +217,7 @@ header img {
   flex-direction: column;
   flex-wrap: wrap;
   gap: 40px;
-  padding: 50px;
+  padding: 5%;
 }
 
 .footer {

@@ -69,8 +69,8 @@ html {
 .main .location__icon {
   color: #353535;
 }
-.main .info {
-  background-color: #f6f6f6;
+.main .info h3 {
+  text-align: center;
 }
 .main .left-title {
   width: 100%;

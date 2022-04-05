@@ -39,7 +39,6 @@
         //Styles the how it works section on the homepage
         list-style-type: none;
         width:100%;
-        padding:20px;
 
         .list {
             position: relative;
@@ -91,6 +90,7 @@
                 //Positions the text on the how it works list
                 position: absolute;
                 left: 80px;
+                padding:10px;
             }
         }
     }

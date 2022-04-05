@@ -527,11 +527,11 @@ header img {
     flex-wrap: wrap;
   }
   .cards .card {
-    width: 30%;
+    width: 100%;
   }
 
   .menu .cards {
-    align-items: unset;
+    align-items: flex-start;
   }
   .menu .cards .course {
     width: 30%;

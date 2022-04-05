@@ -54,7 +54,7 @@
        .card {
 
             //Changes the width of the cards
-            width:30%;
+            width:100%;
 
 
         }
@@ -63,7 +63,7 @@
     .menu {
 
         .cards {
-            align-items: unset; //Ensures the items align at the top on larger displays
+            align-items: flex-start; //Ensures the items align at the top on larger displays
             .course {
 
                 //Changes the width of the courses so they are displayed next to each other on bigger screens

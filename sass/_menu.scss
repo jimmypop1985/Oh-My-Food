@@ -9,7 +9,6 @@
     }
 
     .heart {
-        right: 30px;
         font-size: 40px;
     }
 
@@ -21,7 +20,7 @@
     }
 
     &__title {
-        @include centered (row, center, center);
+        @include centered(row, space-between, flex-start);
         justify-content: space-between;
         height:50px;
         width:100%;

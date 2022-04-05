@@ -91,7 +91,7 @@ main .how {
 main .how .list {
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
@@ -265,9 +265,10 @@ header img {
   box-shadow: 0px 2px 2px -2px;
   transition: transform 1s ease-in-out;
   overflow: hidden;
-  padding: 20px .cards .card __1;
-  padding-animation-delay: 0.8s;
-  padding-animation: slide-up 0.5s ease-in-out;
+}
+.cards .card__1 {
+  animation-delay: 0.8s;
+  animation: slide-up 0.5s ease-in-out;
 }
 .cards .card__2 {
   animation-delay: 1s;
@@ -331,7 +332,7 @@ header img {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  padding: 10px;
+  padding: 5px;
 }
 .cards .card__items--price {
   height: 100%;
@@ -352,7 +353,6 @@ header img {
   border-radius: 50px 50px 0px 0px;
 }
 .menu .heart {
-  right: 30px;
   font-size: 40px;
 }
 .menu__img {
@@ -362,8 +362,8 @@ header img {
 }
 .menu__title {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -455,10 +455,10 @@ header img {
 
 .heart {
   font-size: 28px;
+  padding-right: 15px;
 }
 .heart--full {
   position: absolute;
-  right: 15px;
   background: -webkit-gradient(linear, right top, left bottom, from(#9356dc), to(#ff79da));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -469,8 +469,7 @@ header img {
   opacity: 1;
 }
 .heart--line {
-  position: absolute;
-  right: 15px;
+  position: relative;
   transition: opacity 1s ease-in-out, tranform 0.4s ease-in-out;
   display: block;
   opacity: 1;

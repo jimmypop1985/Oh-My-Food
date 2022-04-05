@@ -14,8 +14,8 @@
 
 @mixin centered ($direction, $justify, $align){
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: $justify;
+    align-items: $align;
     flex-direction: $direction;
     flex-wrap: wrap;
 }

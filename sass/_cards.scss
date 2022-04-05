@@ -17,7 +17,6 @@
     box-shadow: $init-box-shadow;
     transition: transform 1s ease-in-out;
     overflow: hidden;
-    padding:20px
 
         &__1 {
             animation-delay: 0.8s;
@@ -89,7 +88,7 @@
                 text-overflow: ellipsis;
                 white-space: nowrap;
                 overflow: hidden;
-                padding:10px;
+                padding:5px;
             }  
          
             &--price {

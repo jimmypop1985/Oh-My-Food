@@ -1,15 +1,20 @@
 .footer {
+
+    //Default stylings for footer in mobile display
     padding:20px;
     height:200px;
     background: #353535;
-    margin-top: -50px;;
+    margin-top: -50px;
 
     a {
+        //Styles the link in the footer
         text-decoration: none;
-        color: white;
+        color: set-text-color(#353535)
     }
 
     &__text {
+
+        //Styles the text in the footer
         color: set-text-color(#353535);
         padding:5px;
         gap:2px;

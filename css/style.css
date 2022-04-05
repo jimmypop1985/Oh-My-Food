@@ -4,14 +4,6 @@
   background: #f2f2f2;
 }
 
-.row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
 .largest {
   font-size: 22pt;
 }
@@ -55,11 +47,11 @@ html {
   text-decoration: none;
 }
 
-main {
+.main {
   margin: 0 auto;
   font-family: "Roboto";
 }
-main .location {
+.main .location {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -71,24 +63,25 @@ main .location {
   gap: 20px;
   box-shadow: inset 0px 5px 5px -5px;
 }
-main .location h1 {
+.main .location h1 {
   color: #353535;
 }
-main .location __icon {
+.main .location__icon {
   color: #353535;
 }
-main .info {
+.main .info {
   background-color: #f6f6f6;
 }
-main .left-title {
+.main .left-title {
   width: 100%;
   text-align: left;
 }
-main .how {
+.main .how {
   list-style-type: none;
   width: 100%;
+  padding: 20px;
 }
-main .how .list {
+.main .how .list {
   position: relative;
   display: flex;
   justify-content: flex-start;
@@ -105,14 +98,14 @@ main .how .list {
   box-shadow: 0px 2px 2px -2px;
   left: 10px;
 }
-main .how .list:hover {
+.main .how .list:hover {
   background: #f2eafb;
   box-shadow: 0px 5px 5px -5px;
 }
-main .how .list:hover .list__icon {
+.main .how .list:hover .list__icon {
   color: #9356DC;
 }
-main .how .list__number {
+.main .how .list__number {
   text-align: center;
   position: absolute;
   background-color: #9356DC;
@@ -123,16 +116,16 @@ main .how .list__number {
   color: white;
   left: -10px;
 }
-main .how .list__icon {
+.main .how .list__icon {
   position: absolute;
   left: 40px;
 }
-main .how .list__text {
+.main .how .list__text {
   position: absolute;
   left: 80px;
 }
 
-.full__container {
+full__container {
   height: 100%;
   width: 100%;
   z-index: 2;
@@ -208,6 +201,7 @@ header img {
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
+  font-family: "Roboto", sans-serif;
 }
 .button:hover {
   background: linear-gradient(to bottom right, #ff93e1, #a16be0);
@@ -232,7 +226,7 @@ header img {
 }
 .footer a {
   text-decoration: none;
-  color: white;
+  color: #ffffff;
 }
 .footer__text {
   color: #ffffff;
@@ -262,13 +256,16 @@ header img {
   gap: 30px;
   padding-bottom: 50px;
 }
+.cards:hover {
+  box-shadow: 0px 5px 5px -5px;
+}
 .cards .card {
   position: relative;
   width: 100%;
   background-color: white;
   border-radius: 20px;
   box-shadow: 0px 2px 2px -2px;
-  transition: transform 1s ease-in-out;
+  transition: all 1 ease-in-out;
   overflow: hidden;
 }
 .cards .card__1 {
@@ -405,7 +402,6 @@ header img {
 }
 .menu .button {
   width: 180px;
-  font-family: "Roboto", sans-serif;
 }
 .menu a {
   display: flex;
@@ -472,13 +468,12 @@ header img {
   opacity: 0;
 }
 .heart--full:hover {
-  transition: opacity 1s ease-in-out, transform 0.4s ease-in-out;
+  transition: opacity 1s ease-in-out;
   opacity: 1;
 }
 .heart--line {
   position: relative;
-  transition: opacity 1s ease-in-out, tranform 0.4s ease-in-out;
-  display: block;
+  transition: opacity 1s ease-in-out;
   opacity: 1;
 }
 .heart--line:hover {
@@ -486,12 +481,10 @@ header img {
 }
 
 @media screen and (min-width: 1024px) {
-  main .left-title {
+  .main .left-title {
     text-align: center;
   }
-  main .how {
-    list-style-type: none;
-    width: 100%;
+  .main .how {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -499,24 +492,24 @@ header img {
     flex-wrap: wrap;
     gap: 30px;
   }
-  main .how .list {
+  .main .how .list {
     width: 30%;
     flex-direction: column;
     justify-content: center;
     height: auto;
   }
-  main .how .list__number {
+  .main .how .list__number {
     width: 100%;
     position: absolute;
     top: 0px;
     border-radius: 20px 20px 0px 0px;
     left: unset;
   }
-  main .how .list__icon {
+  .main .how .list__icon {
     position: unset;
     margin-top: 20px;
   }
-  main .how .list__text {
+  .main .how .list__text {
     position: unset;
   }
 
@@ -530,28 +523,18 @@ header img {
   .cards .card {
     width: 30%;
   }
-  .cards .card:hover {
-    box-shadow: 0px 5px 5px -5px;
-  }
 
   .menu .cards {
     align-items: unset;
   }
   .menu .cards .course {
     width: 30%;
-    height: 100%;
   }
   .menu .cards .course__subtitle {
     text-align: center;
   }
   .menu .cards .course__subtitle--underline {
     width: 100%;
-  }
-  .menu .cards .course .card {
-    width: 100%;
-  }
-  .menu .cards .course .card__items {
-    min-height: 120px;
   }
   .menu .cards .course .card:hover .card__items--item {
     text-overflow: unset;
@@ -565,6 +548,7 @@ header img {
     flex-direction: column;
     flex-wrap: wrap;
     flex-wrap: nowrap;
+    min-height: 120px;
   }
   .menu .cards .course .card__items--item {
     width: 100%;

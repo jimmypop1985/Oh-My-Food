@@ -2,21 +2,31 @@
 
 .cards { 
 
+    //Global styling for the card containers
+
     @include centered (column, center, center);
     width:100%;
     gap:30px;
     padding-bottom: 50px;
+    
+    &:hover {
+        box-shadow: $hover-box-shadow;
+    }
    
 
     .card {
+
+    //Global stylings fot the cards
 
     position: relative;
     width: 100%;
     background-color: white;
     border-radius: 20px;
     box-shadow: $init-box-shadow;
-    transition: transform 1s ease-in-out;
+    @include transition-ease-io(1);
     overflow: hidden;
+
+    //animates the menu items with different delays for different items so they slide in at intervals
 
         &__1 {
             animation-delay: 0.8s;
@@ -35,6 +45,8 @@
 
         @keyframes slide-up {
 
+            //Sets the animation for the menu items, moves them up slightly and fades them in to view
+
             0% {
                 opacity: 0%;
                 transform: translateY(50px);
@@ -47,12 +59,15 @@
             
         }
 
+        //Styling for the 'new' label used for any new restaurants
+
         &__new {
             position: absolute;
             top: 20px;
             right:10px;
 
 
+            //Style for the text on the label
             &--text {
                 @include centered(row, center, center);
                 width:80px;
@@ -64,6 +79,8 @@
         }
 
         &__img {
+
+            //Styles the images of the restaurants
             object-fit: cover;
             height:175px;
             width: 100%;
@@ -71,6 +88,8 @@
         }
 
         &__items {
+
+            //Styles the menu items
             padding: 10px 0px 10px 20px;
             @include centered (row, center, center);
             flex-wrap: nowrap;
@@ -83,6 +102,8 @@
             }   
 
             &--item {
+
+                //Ensures that the text on the menu items becomes ellipsis on overflow
                 align-self: center;
                 width:100%;
                 text-overflow: ellipsis;

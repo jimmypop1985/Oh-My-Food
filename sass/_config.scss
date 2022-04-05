@@ -1,9 +1,15 @@
+//This page sets any global stylings, functions, mixins or variables used across the site
+
 //Imports the required fonts
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap');
 
 
 @function set-text-color($color){
+
+    //Sets text colour to white when a dark background colour is passed 
+    //and black when a light background colour is passed
+
     @if (lightness($color) > 40%){
         @return #000000;
     }
@@ -11,6 +17,9 @@
         @return #ffffff;
     }
 }
+
+
+//Mixin to prevent repitition on common container stylings
 
 @mixin centered ($direction, $justify, $align){
     display: flex;
@@ -20,8 +29,8 @@
     flex-wrap: wrap;
 }
 
-@mixin transition-ease{
-    transition: all 5s ease-in-out;
+@mixin transition-ease-io($seconds){
+    transition: all $seconds ease-in-out;
 }
 
 //Declares variables
@@ -39,11 +48,10 @@ $small: 12pt;
 $init-box-shadow: 0px 2px 2px -2px;
 $hover-box-shadow: 0px 5px 5px -5px;
 
+//Adds styles to html classes
+
 .grey {
-    background: #f2f2f2
-}
-.row {
-    @include centered (row, center, center);
+    background: #f2f2f2;
 }
 
 .largest {
@@ -70,8 +78,10 @@ $hover-box-shadow: 0px 5px 5px -5px;
     font-weight: $normal
 }
 
+
+
 html {
-    overflow-x: hidden;
+    overflow-x: hidden; //Hides the vertical scrollbar while the loading page is displayed
     animation: viewport 3s;   
 
     @keyframes viewport{

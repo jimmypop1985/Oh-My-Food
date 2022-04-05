@@ -1,25 +1,35 @@
+//Styles the menu pages
+
 .menu {
 
     width:100%;
 
     .container {
+
+        //Sets the position so it overlaps the image above it
         top: -50px;
         position: relative;
         border-radius: 50px 50px 0px 0px;
     }
 
     .heart {
+
+        //Makes the heart bigger on menu pages
         font-size: 30px;
     }
 
     
     &__img {
+
+        //Styles the image at the top of the menu pages
         height:250px;
         width:100%;
         object-fit:cover
     }
 
     &__title {
+
+        //Styles the container for the title and heart on the menu pages
         @include centered(row, space-between, flex-start);
         height:50px;
         width:100%;
@@ -29,9 +39,11 @@
             font-size: x-large;
         }
        
-        }
+    }
 
     .course {
+
+        //Container for the individual courses, styling set
 
         @include centered(column, center, center);
         justify-content: space-evenly;
@@ -41,10 +53,14 @@
 
 
         &__subtitle {
+
+            //Positions the subtitle
             text-align: left;
             width:100%;
     
             &--underline {
+
+                //Sets the green underline for each course, this will change on larger screens
                 width: 40px;
                 border-bottom: 3px solid $tertiary_color;
             }
@@ -59,23 +75,29 @@
         }
     }
     .button {
+
+        //Sets the size of the order button on menu pages
         width: 180px;
-        font-family: $text_font, sans-serif;
+
     } 
 
     a {
+        //Styles the links on the menu pages
         display: flex;
         text-decoration: none;
     }
 
     .box-container {
+
+        //Positions and sizes the container for the menu item price and the green tick box
+        //And sets the parameters to move it in on animation
         display: flex;
         justify-content: center;
         align-items: center;
         margin-right: -80px;
         transition: margin-right 1s ease-in-out;
     }
-
+    //Styles the box that contains the tick icon
     .box {
         height: 100%;
         background: $tertiary_color;
@@ -86,6 +108,8 @@
     }
     
     .check-icon {
+
+        //Styles the tick icon
         transform: rotate(360deg);
         transition: rotate 0.5s ease-in-out;
         background: $tertiary_color;
@@ -95,22 +119,30 @@
     .card {
         &:hover {
             .card__items {
+                //Changes the width of the container for the card items text and animates it so that 
+                //It shrinks when the tick box slides in
                  width: calc(100% - 160px);
                  transition: width 1s ease-in-out;
             }
 
             .check-icon {
+
+                //Rotates the tick when the card is hovered
                 transform: rotate(-360deg);
                 transition: transform 1s ease-in-out;
             
             }
             .box-container {
+
+                //Slides the box container in when the card is hovered
                 margin-right: 0px;
                 transition: margin-right 1s ease-in-out
             }
         }
 
         &__items {
+
+            //Sets the width of the text box to make sure the price fits on the end
             width: calc(100% - 80px);
             transition: width 1s ease-in-out;
         }  

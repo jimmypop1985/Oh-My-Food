@@ -1,13 +1,17 @@
 .heart__container{
+
+    //Centers the hearts in their container
     @include centered(column, center, center);
 }
 
 .heart {
-
+    //Sets stylings for all hearts
     font-size: 28px;
     padding-right:15px;
 
     &--full {
+
+        //Creates the filled heart with gradient and initially hides it 
         position: absolute;
         background: -webkit-gradient(linear, right top, left bottom, from(rgba($primary-color,1)), to(rgba($secondary-color,1)));
         -webkit-background-clip: text;
@@ -15,17 +19,21 @@
         opacity: 0;
 
         &:hover {
-            transition: opacity 1s ease-in-out, transform 0.4s ease-in-out;
+
+            //Transitions the heart to be shown on hover
+            transition: opacity 1s ease-in-out;
             opacity: 1;
         }
     }
     &--line {
+
+        //Shows the unfilled heart when not hovered over
         position: relative;
-        transition: opacity 1s ease-in-out, tranform 0.4s ease-in-out;
-        display: block;
+        transition: opacity 1s ease-in-out;
         opacity: 1;
 
         &:hover {
+            //Hides the unfilled heart on hover
             opacity: 0;
         }        
     }

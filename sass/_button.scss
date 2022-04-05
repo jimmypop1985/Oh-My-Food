@@ -3,15 +3,16 @@
 
 .button {
     cursor: pointer;
-    background: linear-gradient(to bottom right, $secondary-color, $primary_color);
+    background: linear-gradient(to bottom right, $secondary-color, $primary_color); //sets the background as a gradient
     padding:20px;
     border-radius: 100px;
     color: white;
     box-shadow: $init-box-shadow;
     @include centered(row, center, center);
+    font-family: $text_font, sans-serif;
 
     &:hover {
-        background: linear-gradient(to bottom right, lighten($secondary-color, 5%), lighten($primary-color, 5%));
+        background: linear-gradient(to bottom right, lighten($secondary-color, 5%), lighten($primary-color, 5%)); //lightens the gradient colours on hover
         box-shadow: $hover-box-shadow darkgrey;
     }
 }

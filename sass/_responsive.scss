@@ -1,24 +1,30 @@
 @include media-lg {
 
-    main {
-        
+    //Adjust stylings for table and desktop screens
+
+    .main {
+
         .left-title {
+            //Moves the left aligned titles to the center
             text-align: center;
         }
 
         .how {
-            list-style-type: none;
-            width:100%;
+
+            //Changes the layout of the how it works list
             @include centered (row, center, center);
             gap:30px;
     
             .list {
+                //Shrinks the items on the list and changes their layout
                 width: 30%;
                 flex-direction: column;
                 justify-content: center;
                 height: auto;
     
                 &__number {
+
+                    //Changes the positioning of the number and changes its border
                     width:100%;
                     position: absolute;
                     top:0px;
@@ -27,11 +33,13 @@
                 }
     
                 &__icon {
+                    //Repositions the icon
                     position: unset;
                     margin-top: 20px;
                 }
     
                 &__text {
+                    //Repositions the text
                     position: unset;
                 }
             }
@@ -40,43 +48,44 @@
 
 
     .cards {
+        //Changes the display pf the cards on tablet and desktop displays
        @include centered(row, center, center);
        
        .card {
+
+            //Changes the width of the cards
             width:30%;
 
-            &:hover {
-                box-shadow: $hover-box-shadow;
-            }
+
         }
     }
 
     .menu {
 
         .cards {
-            align-items: unset;
+            align-items: unset; //Ensures the items align at the top on larger displays
             .course {
+
+                //Changes the width of the courses so they are displayed next to each other on bigger screens
                 width:30%;
-                height:100%;
             
                 &__subtitle {
 
                     text-align: center;
 
                     &--underline {
+
+                        //Changes the size of the underline on bigger displays
                         width: 100%;
                     }
                 }
                 .card {
-                    width:100%;
-
-                    &__items{
-                        min-height: 120px;
-                    }
 
                     &:hover {
                         
                         .card__items {
+
+                            //On hover any hidden text till how and adjust the size of its container
 
                             &--item{
                             text-overflow: unset;
@@ -87,8 +96,11 @@
                     }
 
                     &__items {
+
+                        //Sets the styles for the card items on bigger screens
                         @include centered (column, center, center);
                         flex-wrap: nowrap;
+                        min-height: 120px;
 
                         &--item {
                             width:100%;
@@ -108,6 +120,7 @@
     }
 
     .footer {
+        //Repositions the items in the footer on bigger displays
         @include centered(column ,center ,center);
         flex-wrap: nowrap;
     }

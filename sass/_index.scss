@@ -1,8 +1,12 @@
-main {
+.main {
+
+    //Styles the main section of the home page
     margin: 0 auto;
     font-family: $text_font;
 
     .location {
+
+        //Styles the location element in the home page
         @include centered(row, center, center);
         width:100%;
         height:50px;
@@ -14,7 +18,7 @@ main {
             color: #353535;
         }
 
-        & __icon {
+        &__icon {
             color: #353535;
         }
     }
@@ -23,13 +27,17 @@ main {
     }
 
     .left-title {   
+        //Left aligns the section title as default for mobile layout
         width: 100%;
         text-align: left;
     }
 
     .how {
+
+        //Styles the how it works section on the homepage
         list-style-type: none;
         width:100%;
+        padding:20px;
 
         .list {
             position: relative;
@@ -45,6 +53,8 @@ main {
             left: 10px;
 
             &:hover {
+
+                //Styles the list items on hover
                 background: lighten($primary-color, 35%);
                 box-shadow: 0px 5px 5px -5px;
 
@@ -54,6 +64,9 @@ main {
             }
 
             &__number {
+
+                //Positions the number on the list so it is just coming off the left edg3e of the border, this
+                //is for mobile layout and changes when on desktop
                 text-align: center;
                 position: absolute;
                 background-color: $primary_color;
@@ -66,11 +79,14 @@ main {
             }
 
             &__icon {
+
+                //Positions the icon on the how it works list
                 position: absolute;
                 left: 40px;;
             }
 
             &__text {
+                //Positions the text on the how it works list
                 position: absolute;
                 left: 80px;
             }

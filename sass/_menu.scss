@@ -9,7 +9,7 @@
     }
 
     .heart {
-        font-size: 40px;
+        font-size: 30px;
     }
 
     
@@ -21,10 +21,14 @@
 
     &__title {
         @include centered(row, space-between, flex-start);
-        justify-content: space-between;
         height:50px;
         width:100%;
         font-family: $logo_text_font, cursive;
+
+        &--text{
+            font-size: x-large;
+        }
+       
         }
 
     .course {

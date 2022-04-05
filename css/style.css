@@ -159,6 +159,7 @@ main .how .list__text {
 .loader__logo {
   max-width: 100%;
   padding: 20px;
+  align-self: center;
 }
 
 @keyframes spin {
@@ -357,7 +358,7 @@ header img {
   border-radius: 50px 50px 0px 0px;
 }
 .menu .heart {
-  font-size: 40px;
+  font-size: 30px;
 }
 .menu__img {
   height: 250px;
@@ -370,10 +371,12 @@ header img {
   align-items: flex-start;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
   height: 50px;
   width: 100%;
   font-family: "Shrikhand", cursive;
+}
+.menu__title--text {
+  font-size: x-large;
 }
 .menu .course {
   display: flex;

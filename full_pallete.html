@@ -9,18 +9,27 @@
         <link rel="stylesheet" href=css/normalize.css>
         <link rel="stylesheet" href=css/style.css>
         <script src="https://kit.fontawesome.com/3ba86adbe3.js" crossorigin="anonymous"></script>
+        <title>The Full Palate</title>
+
     </head>
     <body>
         <header>
+            <!--Displays the arrow on the menu pages-->
             <a href = "index.html" class = "arrow">
                 <i class="fa-solid fa-arrow-left-long arrow__icon large bold"></i>
             </a>
+            <!--Displays the OhMYFood logo-->
             <img src = "images/ohmyfood.png" alt = "Oh My Food Logo" title="Logo">
         </header>
         <section class = "menu">
+
+            <!--Displays a menu with the restaurants image, and menu selection-->
+
+            <!--Displays the image of the restaurant-->
             <img src = "images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt = "The Full Palette" title="Full Pallate" class = "menu__img">
             <div class ="container grey">
                 <div class = menu__title>
+                    <!--Displays the name of the restaurant and a hearts that will appear/disappear on hover-->
                     <h2 class = "bold menu__title--text">The Full Pallete</h2>
                     <span class="heart__container">
                         <i class="fa-regular fa-heart heart heart--line"></i>
@@ -28,24 +37,31 @@
                     </span>   
                 </div>
                 <div class = "cards">      
+                    <!--Section containing the cards for the menu-->
                     <div class = "course">
+                        <!--Splits the menu items into courses, repeated for Mains and Dessert-->
                         <div class  = "course__subtitle">
                             <h3 class = "course__subtitle--text largest bold">ENTREES</h3>
                             <div class = "course__subtitle--underline"></div>
                         </div>
                         <div class = "card card__1">
+                            <!--Creates the menu item, all repeated for other cards-->
                             <a href = "#">
+                                <!--Makes the cards a wholly clickable link-->
                                 <div class = card__items>
+                                    <!--Sets the containers for the items in each card-->
                                     <div class = card__items--text>
                                         <h3 class = "bold medium card__items--item">Escargot</h3>
                                         <h3 class = "normal medium card__items--item">With southern French spices</h3>   
                                     </div>
                                 </div>
                                 <div class = "box-container">
+                                    <!--Contains the price and tick box so css can animate on hover-->
                                     <div class =  "card__items card__items--price">
                                         <h3>25€</h3>
                                     </div>
                                     <div class="box">
+                                        <!--Imports the tick-->
                                         <span><i class="fa-solid fa-circle-check check-icon largest"></i></span>
                                     </div>  
                                 </div> 
@@ -209,10 +225,11 @@
                         </div>  
                     </div>
                 </div>
-                <div class = "medium bold button">Order</div>
+                <div class = "medium bold button">Order</div> <!--Creates the order button-->
             </div>
         </section>
         <footer class = "footer">
+            <!--Footer on menu pages is identical to the one on the home page-->
             <h3 class = "footer__text footer__text--title">ohmyfood</h3>
             <br>
             <div class = "footer__text footer__text--row">

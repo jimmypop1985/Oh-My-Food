@@ -1,31 +1,51 @@
+<!-- OhMyFood WEbsite project for Open Classrooms Poject
+James Drummond - Developer Intern
+ OhMyFood lets users find restaurants in their area, choose items from the menu and order them
+-->
+
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Oh My Food</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-        <link rel="stylesheet" href=css/normalize.css>
-        <link rel="stylesheet" href=css/style.css>
+  <html lang="en"> 
+  <!--States the language of the site is English-->
+  <head> 
+    <!--Container fpr metadata and defines specific information about the document-->
+    <meta charset="utf-8">
+    <!--Specifies the character encoding for the site-->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Allows the developer to implement a responsive design by allowing control of the viewport-->
+    <script src="https://kit.fontawesome.com/3ba86adbe3.js" crossorigin="anonymous"></script>
+    <!--Imports a font kit from the FontAwesome Library allowing the use oof their fonts and icons-->
+    <link rel="stylesheet" type= "text/css" href="css/normalize.css">
+    <!--Links a css stylesheet called normalize.css which makes 
+      browsers render all elements more consistently -->
+    <link rel="stylesheet" type= "text/css" href="css/style.css">
+    <!--Links the authors own CSS stylesheet for the styling properties
+       of the document-->
         <script src="https://kit.fontawesome.com/3ba86adbe3.js" crossorigin="anonymous"></script>
+        <title>OhMyFood</title>
     </head>
     <body>
+        <!--Main body of the document-->
         <header>
+            <!--Displays the OhMyFood logo-->
             <img src = "images/ohmyfood.png" alt = "Oh My Food Logo" title="Logo">
         </header>
         <main class = "main">
-            <section">
+            <section>
+                <!--Displays the location and a location icon in this div-->
                 <div class = "location location__icon row">
                     <i class="fa-solid fa-location-dot"></i>
                     <h1 class = "medium bold">Paris, Belleville</h1>
                 </div>
                 <div class  = "container info">
+                    <!--Introduces thhe website-->
                     <h2 class = "large bold">Book the menu you like</h2>
                     <h3 class = "medium normal">Discover top of the art restaurants we picked for you</h3>
+                    <!--Button to explore the restaurants-->
                     <h3 class = "medium bold button" >Explore Our Restaurants</h3>  
                 </div>
             </section>
+            <!--Contains the list items and title for the How it Works section  -->
             <section class = "container">
                 <h2 class = "left-title" >How it works</h2>
                 <ul class = "how">
@@ -47,21 +67,26 @@
                 </ul>
             </section>
              <section class = "container grey">
+
+                //Contains the Title and cards of the restaurants
                     <h2 class = "largest bold left-title">Restaurants</h2>
                 <div class = "cards">
                     <div class = "card">
-                        <a href = "full_pallete.html">
+                        <!--Contains the information and images in the individual cards, is repeated for all cards-->
+                        <a href = "full_pallete.html"> <!--Makes the cards a wholly clickable link-->
                             <div class = "card__new">
-                                <h3 class = "card__new--text">New</h3>
+                                <h3 class = "card__new--text">New</h3> <!--Contains the 'new label for some restaurants'-->
                             </div> 
+                            <!--displays an image of the restaurant-->
                             <img src = "images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt = "Image of the food at the Full Palate" title="Full Palate Food" class = card__img>
                             <div class = card__items>
+                                <!--Contains the information displayed on the card underneath the image-->
                                 <div class = card__items--text>
                                     <h3 class = "bold medium">The Full Palette</h3>
                                     <h3 class = "normal medium">New York</h3>
                                 </div>
                                 <div>
-                                    <span class="heart__container">
+                                    <span class="heart__container"> <!--Displays the hearts that will appear/disappear on hover-->
                                         <i class="fa-regular fa-heart heart heart--line"></i>
                                         <i class="fa-solid fa-heart heart heart--full"></i>
                                     </span>   
@@ -126,13 +151,14 @@
                     </div>
                 </div>
              </section>
-             <div class = full__container>
-                <img src = "images/ohmyfood.png" alt = "Oh My Food Logo" title="Logo" class = "loader__logo">
-             <div class="loader"></div>
-             <h3 class = "full__container--text">Loading restaurants...</h3> 
+             <div class = full__container> <!--Displays the loading screen which CSS willl make disappear after 3 seconds-->
+                <img src = "images/ohmyfood.png" alt = "Oh My Food Logo" title="Logo" class = "loader__logo"> <!--Displays the logo-->
+             <div class="loader"></div> <!--Displays the spinning loader-->
+             <h3 class = "full__container--text">Loading restaurants...</h3> <!--Displays the loading text-->
             </div>
         </main>
         <footer class = "footer footer__main">
+            <!--Displays the footer and its items-->
             <h3 class = "footer__text footer__text--title">ohmyfood</h3>
             <br>
             <div class = "footer__text footer__text--row">
@@ -147,7 +173,7 @@
                 <p class ="footer__text--text">Legal</p>
             </div>
             <div class = "footer__text">
-               <a href = "mailto:name@email.com"><p class = "footer__text--text">Contact</p></a>
+               <a href = "mailto:name@email.com"><p class = "footer__text--text">Contact</p></a> <!--The contact element is a link that when clicked opens an email function-->
             </div>
         </footer>
     </body>

@@ -14,6 +14,10 @@
     align-items: center;
     animation: disappear 0s ease-in 3s;
     animation-fill-mode: forwards;
+
+    &--text{
+        font-family:  $text_font, sans-serif;
+    }
    
 }
 

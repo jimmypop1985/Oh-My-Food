@@ -140,6 +140,9 @@ html {
   animation: disappear 0s ease-in 3s;
   animation-fill-mode: forwards;
 }
+.full__container--text {
+  font-family: "Roboto", sans-serif;
+}
 
 .loader {
   border: 16px solid #9356DC;

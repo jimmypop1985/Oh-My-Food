@@ -23,6 +23,11 @@
     height: 150px;
     animation: spin 1.5s linear infinite;
 
+    &__logo {
+        max-width:100%;
+        padding:20px;
+    }
+
   }
 
   @keyframes spin {

@@ -156,6 +156,10 @@ main .how .list__text {
   height: 150px;
   animation: spin 1.5s linear infinite;
 }
+.loader__logo {
+  max-width: 100%;
+  padding: 20px;
+}
 
 @keyframes spin {
   0% {

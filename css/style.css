@@ -248,6 +248,10 @@ header img {
   display: flex;
 }
 
+.footer__main {
+  margin-top: unset;
+}
+
 .cards {
   display: flex;
   justify-content: center;

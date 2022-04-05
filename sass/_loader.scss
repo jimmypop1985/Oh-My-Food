@@ -1,8 +1,6 @@
-//Styles the loader which covers the whole screen for three seconds whenever the homepage is loaded
+.full__container {
 
-full__container {
-
-    //Sets the styling for the container and makes it disappear after 3 seconds
+    //Styles the container for the loader and makes it disappear after 3 seconds
     height:100%;
     width:100%;
     z-index: 2;
@@ -21,8 +19,7 @@ full__container {
 
 .loader {
 
-    //Creates a hollow circle with a differrent coloured border on the top 
-    //which will be animated to spin indefinately
+    //Creates the loading spinner and animates it
     border: 16px solid $primary_color;
     border-top: 16px solid $secondary_color;
     border-radius: 50%;
@@ -30,19 +27,16 @@ full__container {
     height: 150px;
     animation: spin 1.5s linear infinite;
 
-    &__logo {
-
-        //Styles the logo
+    &__logo{
+        //Sizes the logo
         max-width:100%;
         padding:20px;
-        align-self: center;
     }
 
   }
 
   @keyframes spin {
-
-    //Rotates the circle
+      //Spins the circle
     0% { transform: rotate(0deg);
      }
     100% { transform: rotate(360deg); }
@@ -50,7 +44,7 @@ full__container {
 
   @keyframes disappear {
 
-    //makes the loading screen disappear
+    //Makes the loading page disappear
 
       to{
           visibility: hidden;

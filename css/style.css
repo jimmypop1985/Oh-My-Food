@@ -69,7 +69,7 @@ html {
 .main .location__icon {
   color: #353535;
 }
-.main .info h3 {
+.main .info h2, .main .info h3 {
   text-align: center;
 }
 .main .left-title {
@@ -125,7 +125,7 @@ html {
   padding: 10px;
 }
 
-full__container {
+.full__container {
   height: 100%;
   width: 100%;
   z-index: 2;
@@ -152,7 +152,6 @@ full__container {
 .loader__logo {
   max-width: 100%;
   padding: 20px;
-  align-self: center;
 }
 
 @keyframes spin {

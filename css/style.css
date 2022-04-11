@@ -268,7 +268,7 @@ header img {
   background-color: white;
   border-radius: 20px;
   box-shadow: 0px 2px 2px -2px;
-  transition: all 1 ease-in-out;
+  transition: all 1s ease-in-out;
   overflow: hidden;
 }
 .cards .card:hover {

@@ -18,7 +18,7 @@
     background-color: white;
     border-radius: 20px;
     box-shadow: $init-box-shadow;
-    @include transition-ease-io(1);
+    @include transition-ease-io(1s);
     overflow: hidden;
 
     &:hover {
